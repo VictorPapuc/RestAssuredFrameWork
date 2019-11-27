@@ -20,9 +20,20 @@ public class StudentGetTests {
 
     @Test
     public void getAllStudentsInformation() {
-        Response response = given().when().get("/list");
+
+        Response response =
+                given()
+                        .when()
+                        .get("/list");
+
         System.out.println(response.body().prettyPrint());
 
+        //Validate Status code
+        given()
+                .when()
+                .get("/list")
+                .then()
+                .statusCode(200);
     }
 
 
