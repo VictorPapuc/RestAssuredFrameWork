@@ -36,5 +36,55 @@ public class StudentGetTests {
                 .statusCode(200);
     }
 
+    @Test
+    public void getOneStudent() {
+
+        Response response =
+                given()
+                        .when()
+                        .get("/1");
+
+        System.out.println(response.body().prettyPrint());
+
+//        Validate Status code
+        given()
+                .when()
+                .get("/1")
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    public void getStudentwithQueryParameter() {
+
+        Response response =
+                given()
+                        .when()
+                        .get("/list?programme=Financial Analysis&limit=3");
+
+//        System.out.println(response.body().prettyPrint());
+
+        //Nu duplica cu pretyyPrint
+        System.out.println(response.body().prettyPeek());
+
+    }
+
+    @Test
+    public void getStudentwithParam() {
+
+        Response response1 = given()
+                .param("programme", "Financial Analysis")
+                .param("limit", 2)
+                .when()
+                .get("/list");
+
+        response1
+                .then()
+                .statusCode(200);
+
+        System.out.println(response1.body().prettyPeek());
+
+    }
+
 
 }
