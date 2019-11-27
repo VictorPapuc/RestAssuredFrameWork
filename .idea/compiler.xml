@@ -12,7 +12,7 @@
     <bytecodeTargetLevel>
       <module name="adswizzudemycourse" target="1.5" />
       <module name="rest-assured-udemy" target="1.5" />
-      <module name="restassuredcoursepart1" target="1.5" />
+      <module name="restassuredcoursepart1" target="7" />
     </bytecodeTargetLevel>
   </component>
 </project>

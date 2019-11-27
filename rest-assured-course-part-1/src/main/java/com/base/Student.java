@@ -5,19 +5,19 @@ import java.util.List;
 public class Student {
 
 
-    private String fristName;
+    private String firstName;
     private String lastName;
     private String email;
     private String programme;
 
     private List<String> courses;
 
-    public String getFristName() {
-        return fristName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFristName(String fristName) {
-        this.fristName = fristName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -51,7 +51,6 @@ public class Student {
     public void setCourses(List<String> courses) {
         this.courses = courses;
     }
-
 
 
 }

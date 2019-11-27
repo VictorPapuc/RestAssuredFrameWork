@@ -19,27 +19,27 @@ public class StudentPostTest {
         RestAssured.basePath = "/student";
     }
 
-
     @Test
-    public void createNewStudent(){
+    public void createNewStudent() {
 
-        ArrayList<String> courses = new ArrayList<String>();
-        courses.add("Java");
-        courses.add("C++");
+            ArrayList<String> courses = new ArrayList<>();
+            courses.add("java");
+            courses.add("C++");
 
-        Student student = new Student();
-        student.setEmail("blalala@email.com");
-        student.setFristName("mama");
-        student.setLastName("tata");
-        student.setCourses(courses);
+            Student student = new Student();
 
-        given()
-                .contentType(ContentType.JSON)
-                .when()
-                .body(student)
-                .post()
-                .then()
-                .statusCode(201);
-    }
+            student.setFirstName("Tej");
+            student.setLastName("Hegde");
+            student.setEmail("xyz@gmail.com");
+            student.setProgramme("Computer Science");
+            student.setCourses(courses);
 
+            given()
+                    .contentType(ContentType.JSON)
+                    .when()
+                    .body(student)
+                    .post()
+                    .then()
+                    .statusCode(201);
+        }
 }
