@@ -1,12 +1,7 @@
 package com.student.loggingexamples;
 
-import com.jayway.restassured.http.ContentType;
-import com.jayway.restassured.response.Response;
 import com.student.base.TestBase;
-import com.student.model.Student;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static com.jayway.restassured.RestAssured.given;
 

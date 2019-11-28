@@ -1,12 +1,12 @@
 package com.cat;
 
 import com.jayway.restassured.RestAssured;
-import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class BaseCatApi {
 
     public String imageId;
-    public String subId ;
+    public String subId;
     public int value;
 
     public String getImageId() {
@@ -35,12 +35,11 @@ public class BaseCatApi {
 
     public static final String APIKEY = "f0010f87-9860-4c13-949f-27afd7299098";
 
-    @BeforeClass
+    @Test
     public static void init() {
         RestAssured.baseURI = "https://api.thecatapi.com/";
         RestAssured.basePath = "/v1";
     }
-
 
 
 }

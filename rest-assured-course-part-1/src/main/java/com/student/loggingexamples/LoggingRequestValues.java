@@ -12,11 +12,9 @@ import static com.jayway.restassured.RestAssured.given;
 
 public class LoggingRequestValues extends TestBase {
 
-
     @Test
     public void test001() {
         System.out.println("-------------------Printing request header------------------");
-
 
         Response response = given()
                                    .when()
