@@ -36,7 +36,7 @@ public class StudentGetTests {
                 .statusCode(200);
     }
 
-    @Test
+
     public void getOneStudent() {
 
         Response response =

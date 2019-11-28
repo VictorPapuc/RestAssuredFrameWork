@@ -22,24 +22,24 @@ public class StudentPostTest {
     @Test
     public void createNewStudent() {
 
-            ArrayList<String> courses = new ArrayList<>();
-            courses.add("java");
-            courses.add("C++");
+        ArrayList<String> courses = new ArrayList<>();
+        courses.add("java");
+        courses.add("C++");
 
-            Student student = new Student();
+        Student student = new Student();
 
-            student.setFirstName("Tej");
-            student.setLastName("Hegde");
-            student.setEmail("xyz@gmail.com");
-            student.setProgramme("Computer Science");
-            student.setCourses(courses);
+        student.setFirstName("Tej");
+        student.setLastName("Hegde");
+        student.setEmail("xyz@gmail.com");
+        student.setProgramme("Computer Science");
+        student.setCourses(courses);
 
-            given()
-                    .contentType(ContentType.JSON)
-                    .when()
-                    .body(student)
-                    .post()
-                    .then()
-                    .statusCode(201);
-        }
+        given()
+                .contentType(ContentType.JSON)
+                .when()
+                .body(student)
+                .post()
+                .then()
+                .statusCode(201);
+    }
 }

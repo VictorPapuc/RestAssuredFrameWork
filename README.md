@@ -3,7 +3,12 @@
 
 * How to run jar localy : 
 
-  * Go to Location : 
+   - mvn clean install -DskipTests
+   - run 'chmod 777 script.sh' in the target/classes folder -temporary step
+   - mvn -pl rest-assured-course-part-1 -Pscript-run package -DskiptTests
+   
+
+     * Go to Location : 
     - /Users/""/IdeaProjects/adswizzudemycourse/rest-assured-course-part-1/src/main/resources
   
   * Run API locally
@@ -16,6 +21,10 @@
    
      - mvn clean install 
      
-     
+     mvn -pl rest-assured-course-part-1 -Pscript-run package
+
+    run 'chmod 777 script.sh' in the target/classes folder
     
+
+* Rezolva target rights . 
        
