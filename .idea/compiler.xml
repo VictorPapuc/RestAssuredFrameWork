@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="restassuredcoursepart1" />
+        <module name="rest-assured-course-part-1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="adswizzudemycourse" target="1.5" />
+      <module name="rest-assured-course-part-1" target="7" />
       <module name="rest-assured-udemy" target="1.5" />
       <module name="restassuredcoursepart1" target="7" />
     </bytecodeTargetLevel>
