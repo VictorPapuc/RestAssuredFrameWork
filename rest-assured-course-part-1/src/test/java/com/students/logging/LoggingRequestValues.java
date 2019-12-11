@@ -1,4 +1,4 @@
-package com.student.loggingexamples;
+package com.students.logging;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;

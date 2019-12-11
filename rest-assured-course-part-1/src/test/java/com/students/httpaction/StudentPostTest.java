@@ -1,4 +1,4 @@
-package com.students.tests;
+package com.students.httpaction;
 
 import com.base.Student;
 import com.jayway.restassured.RestAssured;

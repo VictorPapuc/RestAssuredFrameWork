@@ -4,26 +4,27 @@ import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
-import java.util.List;
 
 import static com.jayway.restassured.RestAssured.given;
-import static com.jayway.restassured.RestAssured.requestSpecification;
 
+@Slf4j
 public class SearchJsonPathExample {
 
     static final String APIKEY = "f0010f87-9860-4c13-949f-27afd7299098";
+
 
 
     @BeforeClass
     public static void init() {
         RestAssured.baseURI = "https://api.thecatapi.com/";
         RestAssured.basePath = "/v1";
+
     }
 
     @Test
@@ -55,10 +56,8 @@ public class SearchJsonPathExample {
         given()
                 .headers("x-api-key", APIKEY)
                 .when()
-                .get("/votes")
-              ;
+                .get("/votes");
     }
-
 
     @Test
     public void test003() {

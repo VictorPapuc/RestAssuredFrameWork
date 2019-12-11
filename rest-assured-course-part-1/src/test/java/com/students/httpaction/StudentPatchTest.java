@@ -1,4 +1,4 @@
-package com.students.tests;
+package com.students.httpaction;
 
 import com.jayway.restassured.http.ContentType;
 import com.student.model.Student;

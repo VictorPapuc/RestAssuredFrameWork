@@ -1,8 +1,20 @@
 package com.base;
 
+
+
+
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.List;
 
+@Slf4j
 public class Student {
+
+    public static void main(String[] args) {
+
+
+
+    }
 
 
     private String firstName;
