@@ -1,6 +1,5 @@
 package com.catapi;
 
-import com.cat.BaseCatApi;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
@@ -14,10 +13,10 @@ public class PostInApiCat {
         String location = "/Users/victor.papuc/IdeaProjects/adswizzudemycourse/rest-assured-course-part-1/src/main/resources/files/createvote.json";
 
         try {
-            BaseCatApi baseCatApi = objectMapper.readValue(new File(location), BaseCatApi.class);
+            BaseCatInitApi baseCatApi = objectMapper.readValue(new File(location), BaseCatInitApi.class);
             String jsonInString = "{\"imageId\":\"mkyong\",\"age\":37,\"}";
 
-            BaseCatApi basecat2 = objectMapper.readValue(jsonInString, BaseCatApi.class);
+            BaseCatInitApi basecat2 = objectMapper.readValue(jsonInString, BaseCatInitApi.class);
 
 
         } catch (IOException e) {

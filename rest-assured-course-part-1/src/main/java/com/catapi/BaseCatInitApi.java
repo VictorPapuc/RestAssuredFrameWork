@@ -1,9 +1,9 @@
-package com.cat;
+package com.catapi;
 
 import com.jayway.restassured.RestAssured;
 import org.junit.Test;
 
-public class BaseCatApi {
+public class BaseCatInitApi {
 
     public String imageId;
     public String subId;

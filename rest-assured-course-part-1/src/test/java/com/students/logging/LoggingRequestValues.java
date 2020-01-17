@@ -2,7 +2,7 @@ package com.students.logging;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
-import com.student.base.TestBase;
+import com.student.base.StudentTestBase;
 import com.student.model.Student;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import static com.jayway.restassured.RestAssured.given;
 
-public class LoggingRequestValues extends TestBase {
+public class LoggingRequestValues extends StudentTestBase {
 
     @Test
     public void test001() {

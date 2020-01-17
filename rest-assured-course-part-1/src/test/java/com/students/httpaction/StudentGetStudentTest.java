@@ -2,14 +2,14 @@ package com.students.httpaction;
 
 
 import com.jayway.restassured.response.Response;
-import com.student.base.TestBase;
+import com.student.base.StudentTestBase;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import static com.jayway.restassured.RestAssured.given;
 
 @Slf4j
-public class StudentGetTest extends TestBase {
+public class StudentGetStudentTest extends StudentTestBase {
 
     @Test
     public void getAllStudentsInformation() {

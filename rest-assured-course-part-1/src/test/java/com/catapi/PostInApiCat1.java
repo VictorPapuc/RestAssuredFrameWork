@@ -1,6 +1,5 @@
 package com.catapi;
 
-import com.cat.BaseCatApi;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
@@ -11,7 +10,7 @@ public class PostInApiCat1 {
     public static void main(String[] args) {
 
         ObjectMapper objectMapper = new ObjectMapper();
-        BaseCatApi baseCatApi = createStaff();
+        BaseCatInitApi baseCatApi = createStaff();
 
         String location = "/Users/victor.papuc/IdeaProjects/adswizzudemycourse/rest-assured-course-part-1/src/main/resources/files/createvote.json";
         try {
@@ -31,9 +30,9 @@ public class PostInApiCat1 {
     }
 
 
-    private static BaseCatApi createStaff() {
+    private static BaseCatInitApi createStaff() {
 
-        BaseCatApi catApi = new BaseCatApi();
+        BaseCatInitApi catApi = new BaseCatInitApi();
         catApi.setImageId("ss");
         catApi.setSubId("ss");
         catApi.setValue(2);
