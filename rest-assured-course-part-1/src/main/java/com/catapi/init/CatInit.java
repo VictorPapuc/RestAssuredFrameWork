@@ -1,4 +1,4 @@
-package init;
+package com.catapi.init;
 
 import com.jayway.restassured.RestAssured;
 import lombok.extern.slf4j.Slf4j;

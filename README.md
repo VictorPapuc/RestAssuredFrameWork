@@ -23,7 +23,7 @@
      
      mvn -pl rest-assured-course-part-1 -Pscript-run package
 
-    run 'chmod 777 script.sh' in the target/classes folder
+    run 'chmod 777 script.sh' in the target/classes folder 
     
 
 * Rezolva target rights . 

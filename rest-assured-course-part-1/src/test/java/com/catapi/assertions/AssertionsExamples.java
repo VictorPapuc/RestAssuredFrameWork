@@ -1,10 +1,7 @@
-package com.catapi.extractingdata;
+package com.catapi.assertions;
 
 import com.catapi.init.CatInit;
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,11 +9,11 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static com.jayway.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 @Slf4j
-public class SearchJsonPathExample extends CatInit {
+public class AssertionsExamples extends CatInit {
 
-    //extract id
 
     @Test
     public void test001() {
@@ -28,7 +25,7 @@ public class SearchJsonPathExample extends CatInit {
                         .get("/votes");
 
         //GET Request
-//        log.info(request.prettyPrint());
+        log.info(request.prettyPrint());
 
 
         ArrayList<Integer> ids = given()
@@ -49,47 +46,64 @@ public class SearchJsonPathExample extends CatInit {
         ArrayList<Integer> expectedId = new ArrayList<>();
         expectedId.add(124474);
         Assert.assertEquals("Integer is equal to ", ids, expectedId);
-
     }
+
 
     @Test
     public void test002() {
 
-        RequestSpecification httpRequest = RestAssured
-                .given()
-                .headers("x-api-key", APIKEY);
 
-        Response response = httpRequest.get("/vote;s");
-        JsonPath jsonPathEvaluator = response.jsonPath();
-        String value = jsonPathEvaluator.getString("id");
+        given()
+                .headers("x-api-key", APIKEY)
+                .when()
+                .get("/votes")
+                .then()
+                //Hamcrest for Object Json
+                .body("id", equalTo(1));
 
-        System.out.println(value);
+//        log.info();
+
+    }
+
+    @Test
+    public void test003() {
+
+        given()
+                .headers("x-api-key", APIKEY)
+                .when()
+                .get("/votes")
+                .then()
+
+                //Hamcrest for Array Json Multiple Assertions
+                .body("id", hasItem(124474))
+                .body("ss", hasItem(221212))
+                .body("ss", hasItem(221212))
+                .body("ss", hasItem(221212))
+                .statusCode(200);
+
+//        log.info();
 
     }
 
 
     @Test
-    public void test003() {
+    public void test004() {
 
-
-        String xml = given()
+        given()
                 .headers("x-api-key", APIKEY)
                 .when()
                 .get("/votes")
-                .asString();
+                .then()
 
+                //Hamcrest Assertions with operators.
+                .body("id", equalTo(124474))
+                .body("ss", greaterThan(221212))
+                .body("ss", lessThanOrEqualTo(221212))
+                .body("ss", hasItem(221212))
+                .statusCode(200);
 
-        RequestSpecification httpRequest = RestAssured
-                .given()
-                .headers("x-api-key", APIKEY);
-
-        Response response = httpRequest.get("/votes");
-        JsonPath jsonPathEvaluator = response.jsonPath();
-        String value = jsonPathEvaluator.getString("id");
-
-        System.out.println(value);
+//        log.info();
 
     }
-
 
 }
