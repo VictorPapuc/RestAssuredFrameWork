@@ -54,10 +54,4 @@ public class RequestSpecifacationExample {
         given().spec(requestSpecification).when().get().then().spec(responseSpecification).log().all();
     }
 
-    @Test
-    public static void test002() {
-
-    }
-
-
 }
