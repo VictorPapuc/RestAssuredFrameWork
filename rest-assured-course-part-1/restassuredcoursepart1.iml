@@ -41,6 +41,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.9.5" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.29" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.github.scribejava:scribejava-apis:2.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.scribejava:scribejava-core:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.11.1" level="project" />
   </component>
 </module>

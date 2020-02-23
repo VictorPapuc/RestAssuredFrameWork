@@ -27,4 +27,6 @@
     
 
 * Rezolva target rights . 
+* Rezolva scriptul sa ruleze cu testele
+* Rezolva excluderea fiserelor prin .gitignore
        
