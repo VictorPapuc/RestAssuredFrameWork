@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>rest-assured-course-part-1</artifactId>
+
     <build>
         <plugins>
             <plugin>
