@@ -9,7 +9,6 @@ import com.jayway.restassured.specification.RequestSpecification;
 import com.jayway.restassured.specification.ResponseSpecification;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
 import java.util.concurrent.TimeUnit;
 
 import static com.jayway.restassured.RestAssured.given;
@@ -27,7 +26,7 @@ public class StudentGetTests {
     @BeforeClass
     public static void init() {
         RestAssured.baseURI = "http://localhost";
-        RestAssured.port = 8081;
+        RestAssured.port = 8080;
         RestAssured.basePath = "/student";
 
         builder = new RequestSpecBuilder();
@@ -40,7 +39,6 @@ public class StudentGetTests {
         responseSpecification = responseSpecBuilder.build();
     }
 
-    @Test
     public void getAllStudentsInformation() {
 
         Response response =
