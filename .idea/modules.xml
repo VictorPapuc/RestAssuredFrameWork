@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StudentAppUnderTest/StudentAppUnderTest.iml" filepath="$PROJECT_DIR$/StudentAppUnderTest/StudentAppUnderTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoApiFramework/DemoApiFramework.iml" filepath="$PROJECT_DIR$/DemoApiFramework/DemoApiFramework.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/adswizzudemycourse.iml" filepath="$PROJECT_DIR$/.idea/adswizzudemycourse.iml" />
-      <module fileurl="file://$PROJECT_DIR$/allure-examples/allure-examples.iml" filepath="$PROJECT_DIR$/allure-examples/allure-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/rest-assured-course-part-1/rest-assured-course-part-1.iml" filepath="$PROJECT_DIR$/rest-assured-course-part-1/rest-assured-course-part-1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rest-assured-course-part-1/restassuredcoursepart1.iml" filepath="$PROJECT_DIR$/rest-assured-course-part-1/restassuredcoursepart1.iml" />
     </modules>
   </component>
 </project>

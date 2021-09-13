@@ -7,19 +7,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="StudentAppUnderTest" />
         <module name="rest-assured-course-part-1" />
-        <module name="restassuredcoursepart1" />
-        <module name="allure-examples" />
+      </profile>
+      <profile name="Annotation profile for rest-assured-udemy" enabled="true">
+        <sourceOutputDir name="../StudentAppUnderTest/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../StudentAppUnderTest/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="DemoApiFramework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="adswizzudemycourse" target="1.5" />
       <module name="allure-examples" target="1.5" />
+      <module name="DemoApiFramework" target="1.8" />
       <module name="rest-assured-course-part-1" target="7" />
       <module name="rest-assured-udemy" target="1.5" />
       <module name="restassuredcoursepart1" target="8" />
-      <module name="StudentAppUnderTest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
