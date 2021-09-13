@@ -1,3 +1,3 @@
 Feature: Get all students
 
-  Given I have students
+  Given I ha ve students
